@@ -2,7 +2,7 @@
 title: Asnity
 description: 커뮤니티, 채널이 있는 실시간 채팅 서비스
 image: asnity.png
-date: 2023-04-28
+date: 2023-04-27
 ---
 
 - 개발 기간: 6주 (22.11 ~ 22.12)
