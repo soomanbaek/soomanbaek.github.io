@@ -1,0 +1,48 @@
+title: Sooman
+description: >-
+  Backend Developer
+url: "https://soomanbaek.github.io"
+github: soomanbaek
+email: soomanbaek@gmail.com
+google_analytics: <YOUR UA TOKEN>
+
+exclude: [README.md, Gemfile, Gemfile.lock]
+
+comments:
+  enabled: false
+  repo: soomanbaek
+  issue-term: pathname
+
+collections:
+  pages:
+    output: true
+  projects:
+    output: true
+  tags:
+    output: true
+
+defaults:
+  - scope:
+      type: pages
+    values:
+      layout: default
+  - scope:
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:title
+      toc: true
+      toc_sticky: true
+  - scope:
+      type: projects
+    values:
+      layout: project
+      permalink: /projects/:title
+  - scope:
+      type: tags
+    values:
+      layout: tag
+      permalink: /tags/:title
+
+plugins:
+  - jekyll-toc
