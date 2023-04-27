@@ -1,5 +1,5 @@
 ---
-title: 하노이탑 AI
+title: tower_of_hanoi AI
 description: 카메라로 하노이탑의 고리 위치를 인식, 유전 알고리즘으로 고리를 옮기는 최소 횟수를 계산하여 화면에 보여주는 프로그램입니다.
 image: tower_of_hanoi.gif
 date: 2023-04-27
