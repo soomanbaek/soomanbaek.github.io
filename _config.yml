@@ -20,6 +20,8 @@ collections:
     output: true
   tags:
     output: true
+  books:
+    output: true
 
 defaults:
   - scope:
@@ -43,6 +45,11 @@ defaults:
     values:
       layout: tag
       permalink: /tags/:title
+  - scope:
+      type: books
+    values:
+      layout: book
+      permalink: /books/:title
 
 plugins:
   - jekyll-toc

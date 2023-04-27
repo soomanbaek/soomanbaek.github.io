@@ -1,0 +1,33 @@
+---
+title: Books
+description: 지금까지 읽은 책들을 모아놓은 곳입니다.
+permalink: book
+visible: true
+---
+
+<div class="hyde posts">
+    {% assign sorted = site.books | sort: 'date' | reverse %} {% for book in sorted %}
+    <div class="hyde post{% unless forloop.last %} divider{% endunless %}">
+        <a href="{{ book.url }}">
+            <div class="hyde post-thumbnail-wrapper">
+                {% if book.image %}
+                <div class="hyde post-thumbnail" style="background-image: url('/assets/images/books/{{ book.image }}');"></div>
+                {% elsif book.youtube %}
+                <div
+                        class="hyde post-thumbnail"
+                        style="background-image: url('{{ book.youtube | prepend: 'https://img.youtube.com/vi/' }}/maxresdefault.jpg')"
+                ></div>
+                {% else %}
+                <div class="hyde post-thumbnail"></div>
+                {% endif %}
+            </div>
+        </a>
+        <a href="{{ book.url }}">
+            <h2 class="hyde post-title">{{ book.title }}</h2>
+        </a>
+        <div class="hyde post-trail">
+            <span class="hyde post-date">{{ book.date | date: '%Y년 %-m월 %-d일' }}</span>
+        </div>
+    </div>
+    {% else %} {% include empty.html %} {% endfor %}
+</div>
